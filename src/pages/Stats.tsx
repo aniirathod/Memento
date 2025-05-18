@@ -15,7 +15,6 @@ import {
 import { format, subDays, startOfDay } from "date-fns";
 import CalendarHeatmap from "@/components/CalendarHeatmap";
 import { motion } from "framer-motion";
-import "react-calendar-heatmap/dist/styles.css";
 
 const Stats = () => {
   const { userStats, flashcards } = useFlashcardStore();

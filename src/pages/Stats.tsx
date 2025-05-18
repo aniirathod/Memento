@@ -1,4 +1,3 @@
-import React from "react";
 import useFlashcardStore from "@/features/flashcards/store/useFlashcardStore";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -19,7 +18,7 @@ import { motion } from "framer-motion";
 import "react-calendar-heatmap/dist/styles.css";
 
 const Stats = () => {
-  const { userStats, flashcards, decks } = useFlashcardStore();
+  const { userStats, flashcards } = useFlashcardStore();
 
   // Calculate card status distribution
   const rawStatusDistribution = [
@@ -194,7 +193,7 @@ const Stats = () => {
                           `${name}: ${(percent * 100).toFixed(0)}%`
                         }
                       >
-                        {statusDistribution.map((entry, index) => (
+                        {statusDistribution.map((_entry, index) => (
                           <Cell
                             key={`cell-${index}`}
                             fill={COLORS[index % COLORS.length]}

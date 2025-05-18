@@ -1,13 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { v4 as uuidv4 } from "uuid";
-import type {
-  Flashcard,
-  Deck,
-  UserStats,
-  Review,
-  ReviewStatus,
-} from "../types";
+import type { Flashcard, Deck, UserStats, Review } from "../types";
 import { calculateNextReview } from "../utils/spaced-repetition";
 
 interface FlashcardState {

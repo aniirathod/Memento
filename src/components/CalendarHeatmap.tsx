@@ -1,5 +1,5 @@
 import React from "react";
-import { addDays, format, getDay, startOfMonth, startOfWeek } from "date-fns";
+import { addDays, format, startOfMonth, startOfWeek } from "date-fns";
 import { cn } from "@/lib/utils";
 
 interface CalendarHeatmapProps {
@@ -32,11 +32,11 @@ const CalendarHeatmap: React.FC<CalendarHeatmapProps> = ({
 
   // Get color intensity based on activity count
   const getColorIntensity = (count: number) => {
-    if (count === 0) return "bg-gray-100";
+    if (count === 0) return "bg-gray-100 ";
     if (count <= 2) return "bg-emerald-500/20";
     if (count <= 5) return "bg-emerald-500/50";
     if (count <= 10) return "bg-emerald-500/70";
-    return "bg-emerald-500";
+    return "bg-emerald-500 ";
   };
 
   return (

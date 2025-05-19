@@ -48,9 +48,9 @@ Memento implements the spaced repetition technique to maximize learning efficien
 
 ## Tech Stack
 
-- **Frontend:** React 18, TypeScript, Vite
-- **Styling:** CSS Modules / Tailwind CSS (adjust as per your project)
-- **State Management:** Zustand (or your choice)
+- **Frontend:** React 19, TypeScript, Vite
+- **Styling:** Tailwind CSS
+- **State Management:** Zustand
 - **Routing:** React Router
 - **Linting:** ESLint
 - **Build Tool:** Vite
@@ -59,6 +59,7 @@ Memento implements the spaced repetition technique to maximize learning efficien
 
 ## Project Structure
 
+```
 memento
 ├── README.md
 ├── components.json
@@ -110,6 +111,7 @@ memento
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
+```
 
 ---
 
@@ -151,4 +153,4 @@ Please follow the existing code style and add tests where applicable.
 ## Contact
 
 Your Name — [aniketnr5023@gmail.com](mailto:aniketnr5023@gmail.com)  
-Portfolio Link: [https://aniket-rathod.vercel.app](ttps://aniket-rathod.vercel.app)
+Portfolio Link: [https://aniket-rathod.vercel.app](https://aniket-rathod.vercel.app)

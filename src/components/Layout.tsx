@@ -11,6 +11,7 @@ import { useFlashcardStore } from "@/features/flashcards/store/useFlashcardStore
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./ModeToggle";
 import { OnboardingDialog } from "./OnboardingDialog";
+import StarBorder from "@/components/animation/StarBorder";
 
 const Layout = () => {
   const location = useLocation();
@@ -18,21 +19,29 @@ const Layout = () => {
 
   // Navigation items with their paths and icons
   const navItems = [
-    { name: "Home", path: "/", icon: <HomeIcon className="h-5 w-5" /> },
+    {
+      name: "Home",
+      path: "/dashboard",
+      icon: <HomeIcon className="h-5 w-5" />,
+    },
     {
       name: "Review",
-      path: "/review",
+      path: "/dashboard/review",
       icon: <BookOpenIcon className="h-5 w-5" />,
     },
-    { name: "Add", path: "/add", icon: <PlusIcon className="h-5 w-5" /> },
+    {
+      name: "Add",
+      path: "/dashboard/add",
+      icon: <PlusIcon className="h-5 w-5" />,
+    },
     {
       name: "Decks",
-      path: "/decks",
+      path: "/dashboard/decks",
       icon: <BookmarkIcon className="h-5 w-5" />,
     },
     {
       name: "Stats",
-      path: "/stats",
+      path: "/dashboard/stats",
       icon: <BarChartIcon className="h-5 w-5" />,
     },
   ];
@@ -41,6 +50,7 @@ const Layout = () => {
     <div className="min-h-screen bg-background-2">
       <OnboardingDialog />
       {/* Header */}
+
       <header className="border-b shadow-sm ">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center">
@@ -49,14 +59,19 @@ const Layout = () => {
 
           <div className="flex items-center space-x-8">
             {/* User streak & level */}
-            <div className="hidden md:flex items-center space-x-2 px-3 py-1 bg-muted rounded-full">
-              <span className="text-primary font-semibold">
-                🔥 {userStats.streakDays} days
-              </span>
-              <span className="text-sm text-muted-foreground">•</span>
-              <span className="text-sm text-primary">
-                Level {userStats.level}
-              </span>
+            <div className="hidden md:flex items-center ">
+              <StarBorder
+                className="rounded-full px-4 py-1 space-x-5 bg-gradient-t0-b from-white to-white  dark:bg-gradient-to-b dark:from-black dark:to-gray-900 "
+                starClass="rounded-full"
+              >
+                <span className="text-primary font-semibold">
+                  🔥 {userStats.streakDays} days
+                </span>
+                <span className="text-sm text-muted-foreground">•</span>
+                <span className="text-sm text-primary">
+                  Level {userStats.level}
+                </span>
+              </StarBorder>
             </div>
             <ModeToggle />
           </div>

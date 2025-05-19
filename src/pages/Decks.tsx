@@ -84,7 +84,7 @@ const Decks = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Your Decks</h1>
-        <Link to="/add">
+        <Link to="/dashboard/add">
           <Button size="sm" className="bg-black dark:bg-purple-500">
             <PlusIcon className="h-4 w-4 mr-1" />
             New Deck
@@ -153,7 +153,7 @@ const Decks = () => {
           <p className="text-muted-foreground mb-4">
             You haven't created any decks yet.
           </p>
-          <Link to="/add">
+          <Link to="/dashboard/add">
             <Button>Create Your First Deck</Button>
           </Link>
         </div>

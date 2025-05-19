@@ -112,7 +112,7 @@ const Review = () => {
                 <p className="text-muted-foreground mb-4">
                   You haven't created any decks yet.
                 </p>
-                <Link to="/add">
+                <Link to="/dashboard/add">
                   <Button>Create Your First Deck</Button>
                 </Link>
               </div>
@@ -253,7 +253,7 @@ const Review = () => {
 
                   <div className="mt-6">
                     {!showAnswer ? (
-                      <div className="flex justify-center">
+                      <div className="hidden">
                         <Button
                           size="lg"
                           onClick={() => setShowAnswer(true)}

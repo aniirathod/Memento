@@ -42,6 +42,40 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --color-background-2: var(--background-2);
+
+  --animate-star-movement-top: star-movement-top linear infinite alternate;
+  @keyframes star-movement-top {
+    0% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(100%, 0%);
+      opacity: 0;
+    }
+  }
+
+  --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
+  @keyframes star-movement-bottom {
+    0% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-100%, 0%);
+      opacity: 0;
+    }
+  }
+
+  --animate-shine: shine 5s linear infinite;
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
 }
 
 :root {

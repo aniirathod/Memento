@@ -39,7 +39,7 @@ const CreateDeckForm: React.FC = () => {
     );
 
     toast.success("Deck created successfully!");
-    navigate(`/decks/${newDeck.id}`);
+    navigate(`/dashboard/decks/${newDeck.id}`);
   };
 
   return (

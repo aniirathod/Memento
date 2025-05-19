@@ -106,7 +106,10 @@ const CreateFlashcardForm: React.FC<CreateFlashcardFormProps> = ({
         />
 
         <div className="flex justify-end">
-          <Button type="submit" className="bg-primary hover:bg-primary/90">
+          <Button
+            type="submit"
+            className="bg-primary hover:bg-primary/90 cursor-pointer"
+          >
             Create Flashcard
           </Button>
         </div>

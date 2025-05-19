@@ -41,6 +41,7 @@ import CreateFlashcardForm from "@/features/flashcards/components/CreateFlashcar
 import FlashcardComponent from "@/features/flashcards/components/Flashcard";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import EditDeckDialog from "@/features/decks/components/EditDeckDialog";
 
 const DeckDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -114,7 +115,9 @@ const DeckDetail = () => {
             </AlertDescription>
           </Alert>
           <div className="mt-4 flex justify-center">
-            <Button onClick={() => navigate("/decks")}>Return to Decks</Button>
+            <Button onClick={() => navigate("/dashboard/decks")}>
+              Return to Decks
+            </Button>
           </div>
         </CardContent>
       </Card>
@@ -124,7 +127,7 @@ const DeckDetail = () => {
   const handleDeleteDeck = () => {
     deleteDeck(deck.id);
     toast.success(`Deck "${deck.name}" deleted successfully`);
-    navigate("/decks");
+    navigate("/dashboard/decks");
   };
 
   const handleDeleteCard = (cardId: string) => {
@@ -146,10 +149,13 @@ const DeckDetail = () => {
             <div className="space-x-2">
               <Button
                 variant="outline"
-                onClick={() => navigate(`/review/${deck.id}`)}
+                onClick={() => navigate(`/dashboard/review/${deck.id}`)}
               >
                 Review Deck
               </Button>
+
+              {/* update deck */}
+              <EditDeckDialog deck={deck} />
               <Dialog
                 open={isDeleteDialogOpen}
                 onOpenChange={setIsDeleteDialogOpen}
@@ -243,7 +249,7 @@ const DeckDetail = () => {
           </div>
 
           <Tabs value={selectedTab} onValueChange={setSelectedTab}>
-            <TabsList className="grid w-full grid-cols-2">
+            <TabsList className="grid w-full grid-cols-2 bg-card">
               <TabsTrigger value="cards" className="flex items-center">
                 <ListIcon className="h-4 w-4 mr-2" />
                 Cards ({deckCards.length})

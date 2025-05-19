@@ -6,6 +6,7 @@ import {
   BarChartIcon,
   PlusIcon,
   BookmarkIcon,
+  Brain,
 } from "lucide-react";
 import { useFlashcardStore } from "@/features/flashcards/store/useFlashcardStore";
 import { cn } from "@/lib/utils";
@@ -53,8 +54,9 @@ const Layout = () => {
 
       <header className="border-b shadow-sm ">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <div className="text-primary text-2xl font-bold">Memento</div>
+          <Link to="/" className="flex items-center gap-2">
+            <Brain className="h-8 w-8 text-purple-400" />
+            <span className="text-2xl font-bold">Memento</span>
           </Link>
 
           <div className="flex items-center space-x-8">

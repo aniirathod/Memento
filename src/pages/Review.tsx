@@ -182,7 +182,9 @@ const Review = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-3 justify-center">
-                    <Button onClick={() => navigate("/")}>Return Home</Button>
+                    <Button onClick={() => navigate("/dashboard")}>
+                      Return Home
+                    </Button>
 
                     <Button
                       variant="outline"

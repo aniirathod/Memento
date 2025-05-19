@@ -6,7 +6,7 @@ import Squares from "@/components/animation/Squares";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full relative overflow-hidden bg-background-2">
+    <div className="min-h-screen w-full relative overflow-hidden  bg-[#020817]">
       <div className="absolute h-full w-full z-50 opacity-75">
         <Squares
           speed={0.5}
@@ -19,10 +19,10 @@ const Home = () => {
 
       <div className="relative z-50 container mx-auto min-h-screen flex flex-col w-11/12">
         {/* Header */}
-        <header className="flex items-center justify-between py-6">
+        <header className="flex items-center justify-between py-6 text-white">
           <div className="flex items-center gap-2">
             <Brain className="h-8 w-8 text-purple-400" />
-            <span className="text-2xl font-bold">Memento</span>
+            <span className="text-2xl font-bold ">Memento</span>
           </div>
 
           <Link to="/dashboard">
@@ -38,12 +38,12 @@ const Home = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex flex-1 flex-col justify-center gap-6 text-center sm:text-left"
+              className="flex flex-1 flex-col justify-center gap-6 text-center sm:text-left text-white"
             >
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-                Remember <span className="text-primary">Everything</span>
+                Remember <span className="text-white">Everything</span>
                 <br />
-                Learn <span className="text-primary">Forever</span>
+                Learn <span className="text-white">Forever</span>
               </h1>
 
               <p className="text-sm text-slate-300 sm:text-base md:text-lg">

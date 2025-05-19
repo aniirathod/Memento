@@ -1,7 +1,5 @@
 # Memento
 
-![Memento Logo](./public/FuturesticBrain.png)
-
 **Memento** is a modern, efficient spaced repetition learning platform built with React, TypeScript, and Vite. It helps users improve knowledge retention by using flashcards and decks, tracking progress, and analyzing learning stats.
 
 _This project was developed for the CodeCircuit hackathon._
